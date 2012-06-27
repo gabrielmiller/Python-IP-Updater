@@ -6,7 +6,7 @@ publicIpStr = str(publicIp.read().rstrip('\n'))
 time.sleep(60)
 
 if len(publicIpStr)<7:
-	writeOutput = 'There was an error between the script and http://www.curlmyip.com/%nYou may be able to find the IP through cheddarcode\'s last login log.'
+	writeOutput = 'There was an error between the script and http://www.curlmyip.com/\nYou may be able to find the IP through cheddarcode\'s last login log.'
 else:
 	writeOutput = "<?php\\nheader(\'Location: http://%s:8002\')\\n?>" % publicIpStr
 
